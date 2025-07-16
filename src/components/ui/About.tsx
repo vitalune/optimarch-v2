@@ -1,35 +1,38 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Award, Users, Target, Lightbulb, Globe, Zap } from 'lucide-react'
+import { Award, Users, Target, Lightbulb, Globe, Zap, Brain, Code, Rocket } from 'lucide-react'
 
-const stats = [
-  { value: '50+', label: 'Projects Delivered', icon: Target },
-  { value: '98%', label: 'Client Satisfaction', icon: Award },
-  { value: '5+', label: 'Years Experience', icon: Users },
-  { value: '24/7', label: 'Support Available', icon: Zap }
-]
+const founderInfo = {
+  name: 'Amir Valizadeh',
+  title: 'CEO & Founder',
+  age: 18,
+  location: 'Arlington, Virginia',
+  education: 'Computer Science Student at University of Pittsburgh',
+  vision: 'To advance deep learning and neural network technologies, contributing to pioneering AI projects worldwide.',
+  skills: ['Python', 'JavaScript', 'TypeScript', 'C', 'Java', 'AI/ML', 'OpenAI API', 'RAG Systems']
+}
 
 const values = [
   {
-    icon: Lightbulb,
-    title: 'Innovation First',
-    description: 'Staying ahead of the curve, constantly exploring new AI technologies to deliver next-generation solutions.'
+    icon: Brain,
+    title: 'AI Innovation',
+    description: 'Passionate about developing cutting-edge AI technologies including RAG ChatBots and Large Language Models from scratch.'
   },
   {
-    icon: Users,
-    title: 'Client-Centric',
-    description: 'Client success through lasting partnerships, transparent communication and exceptional service.'
+    icon: Code,
+    title: 'Technical Excellence',
+    description: 'Harvard CS50 certified with hands-on experience in multiple programming languages and advanced AI implementations.'
   },
   {
-    icon: Award,
-    title: 'Excellence Driven',
-    description: 'Maintaining the highest standards in every project, ensuring quality, reliability, and measurable business impact.'
+    icon: Rocket,
+    title: 'Startup Vision',
+    description: 'At 18, building the future of AI automation with a fresh perspective and relentless drive for innovation.'
   },
   {
     icon: Globe,
-    title: 'Global Perspective',
-    description: 'Global expertise and cultural understanding applied to every AI implementation.'
+    title: 'Global Impact',
+    description: 'Committed to becoming a driving force in AI research and development, creating solutions that transform businesses worldwide.'
   }
 ]
 
@@ -47,32 +50,54 @@ export default function About() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            About <span className="gradient-text">Optimarch</span>
+            Meet the <span className="gradient-text">Founder</span>
           </h2>
         </motion.div>
 
         <div className="h-8"></div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-28">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="text-center group"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="w-8 h-8 text-white" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto mb-28"
+        >
+          <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 md:p-12">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{founderInfo.name}</h3>
+              <p className="text-xl text-blue-400 mb-4">{founderInfo.title}</p>
+              <p className="text-gray-300 mb-6">{founderInfo.education}</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-3">Location</h4>
+                <p className="text-gray-300">{founderInfo.location}</p>
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                {stat.value}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-3">Age</h4>
+                <p className="text-gray-300">{founderInfo.age} years old</p>
               </div>
-              <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+            
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-white mb-3">Vision</h4>
+              <p className="text-gray-300 leading-relaxed">{founderInfo.vision}</p>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-3">Technical Skills</h4>
+              <div className="flex flex-wrap gap-2">
+                {founderInfo.skills.map((skill, index) => (
+                  <span key={index} className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -83,7 +108,7 @@ export default function About() {
         >
           <div className="h-8"></div>
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            My <span className="gradient-text">Core Values</span>
+            What Drives <span className="gradient-text">Optimarch</span>
           </h3>
           
           <div className="h-8"></div>
