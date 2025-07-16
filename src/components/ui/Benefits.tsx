@@ -65,6 +65,8 @@ export default function Benefits() {
           </h2>
         </motion.div>
 
+        <div className="h-8"></div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-28">
           {benefits.map((benefit, index) => (
             <motion.div

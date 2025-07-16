@@ -72,6 +72,8 @@ export default function Services() {
             <span className="gradient-text">AI Solutions</span> for Every Business Need
           </h2>
         </motion.div>
+        
+        <div className="h-8"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (

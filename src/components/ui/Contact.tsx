@@ -92,6 +92,8 @@ export default function Contact() {
           </h2>
         </motion.div>
 
+        <div className="h-8"></div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-24">
           {contactInfo.map((info, index) => (
             <motion.div
@@ -263,6 +265,7 @@ export default function Contact() {
               </motion.button>
             </form>
           </motion.div>
+          <div className="h-8"></div>
         </div>
       </div>
     </section>

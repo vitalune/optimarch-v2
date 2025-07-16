@@ -38,7 +38,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black">
       <div className="max-w-7xl mx-auto">
-        <div className="h-16"></div>
+        <div className="h-8"></div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,6 +51,8 @@ export default function About() {
           </h2>
         </motion.div>
 
+        <div className="h-8"></div>
+        
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-28">
           {stats.map((stat, index) => (
             <motion.div
@@ -79,10 +81,13 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-32"
         >
+          <div className="h-8"></div>
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
             My <span className="gradient-text">Core Values</span>
           </h3>
           
+          <div className="h-8"></div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {values.map((value, index) => (
               <motion.div

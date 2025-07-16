@@ -58,6 +58,8 @@ export default function Process() {
           </h2>
         </motion.div>
 
+        <div className="h-8"></div>
+        
         <div className="relative">
           <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 opacity-30" />
           
