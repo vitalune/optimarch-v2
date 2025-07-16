@@ -26,19 +26,17 @@ const footerSections = [
     links: [
       { label: 'About Us', href: '#about' },
       { label: 'Our Process', href: '#process' },
-      { label: 'Case Studies', href: '#benefits' },
-      { label: 'Careers', href: '#' },
-      { label: 'Blog', href: '#' },
+      { label: 'Case Studies', href: 'https://marketingassets.microsoft.com/gdc/gdcflXNT6/original' },
+      { label: 'Contact', href: '#contact' },
     ]
   },
   {
-    title: 'Resources',
+    title: 'Connect',
     links: [
-      { label: 'Documentation', href: '#' },
-      { label: 'API Reference', href: '#' },
-      { label: 'Support Center', href: '#' },
-      { label: 'Community', href: '#' },
-      { label: 'Privacy Policy', href: '#' },
+      { label: 'LinkedIn', href: 'https://linkedin.com/in/amir-valizadeh104' },
+      { label: 'GitHub', href: 'https://github.com/vitalune' },
+      { label: 'Hugging Face', href: 'https://huggingface.co/vitalune' },
+      { label: 'Email', href: 'mailto:amirvalizadeh161@gmail.com' },
     ]
   }
 ]
@@ -95,10 +93,12 @@ export default function Footer() {
                     <li key={link.label}>
                       <a
                         href={link.href}
+                        target={link.href.startsWith('http') ? '_blank' : '_self'}
+                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="text-gray-400 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                       >
                         {link.label}
-                        {link.href === '#' && (
+                        {link.href.startsWith('http') && (
                           <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                         )}
                       </a>
@@ -133,6 +133,8 @@ export default function Footer() {
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
