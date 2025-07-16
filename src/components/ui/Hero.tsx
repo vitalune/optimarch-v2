@@ -45,26 +45,9 @@ export default function Hero() {
 
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex justify-center items-center mb-16"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold text-lg flex items-center space-x-2 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-            >
-              <span>Get Started Today</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
-
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24 max-w-4xl mx-auto"
           >
             <div className="text-center space-y-3">
@@ -79,6 +62,25 @@ export default function Hero() {
               <div className="text-3xl font-bold text-cyan-400">24/7</div>
               <div className="text-gray-400">Automated Operations</div>
             </div>
+          </motion.div>
+          
+          <div className="h-8"></div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="flex justify-center items-center mt-16"
+          >            
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group px-12 py-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl text-white font-semibold text-xl flex items-center space-x-3 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 max-w-2xl"
+            >
+              <span>Schedule a meeting</span>
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </motion.button>
           </motion.div>
         </motion.div>
       </div>
