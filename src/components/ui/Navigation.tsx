@@ -34,6 +34,7 @@ export default function Navigation() {
         scrolled ? 'bg-black/80 backdrop-blur-lg border-b border-blue-500/20' : ''
       }`}
     >
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div
