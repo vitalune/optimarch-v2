@@ -37,7 +37,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-12"
           >
             <span className="block mb-2">Transform Your</span>
             <span className="block gradient-text">Business with AI</span>
@@ -48,7 +48,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center mb-16"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -65,7 +65,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 max-w-4xl mx-auto"
           >
             <div className="text-center space-y-2">
               <div className="text-3xl font-bold text-blue-400">50%</div>

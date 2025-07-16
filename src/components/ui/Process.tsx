@@ -51,7 +51,7 @@ export default function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             My <span className="gradient-text">Proven Process</span>

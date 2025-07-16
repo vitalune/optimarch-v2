@@ -43,14 +43,14 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             About <span className="gradient-text">Optimarch</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -76,7 +76,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-24"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
             My <span className="gradient-text">Core Values</span>

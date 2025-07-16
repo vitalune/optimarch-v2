@@ -85,14 +85,14 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Let&apos;s <span className="gradient-text">Build the Future</span> Together
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
           {contactInfo.map((info, index) => (
             <motion.div
               key={info.title}
