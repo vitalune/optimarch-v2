@@ -54,7 +54,7 @@ const budgetRanges = [
   '$500 - $1K',
   '$1K - $5K',
   '$5K - $10K',
-  '$10K - #50K',
+  '$10K - $50K',
   '$50K+',
   'Not sure yet'
 ]
@@ -94,9 +94,14 @@ export default function Contact() {
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000)
     } catch (error) {
-      console.error('Error submitting form:', error)
+      // Log error for debugging in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error submitting form:', error)
+      }
+      
       setSubmitStatus('error')
-      setErrorMessage('Failed to send message. Please try again or contact us directly.')
+      const errorMessage = error instanceof Error ? error.message : 'Failed to send message. Please try again or contact us directly.'
+      setErrorMessage(errorMessage)
     }
   }
 

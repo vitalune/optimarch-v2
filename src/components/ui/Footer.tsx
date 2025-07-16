@@ -119,7 +119,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-gray-400 text-sm"
             >
-              © 2024 Optimarch. All rights reserved. Built with AI-powered innovation.
+              © 2025 Optimarch. All rights reserved. Built with AI-powered innovation.
             </motion.div>
             
             <motion.div

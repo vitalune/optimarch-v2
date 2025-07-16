@@ -50,8 +50,14 @@ export const sendEmail = async (formData: {
 
     return response
   } catch (error) {
-    console.error('EmailJS Error:', error)
-    throw error
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('EmailJS Error:', error)
+    }
+    
+    // Throw a user-friendly error message
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
+    throw new Error(`Failed to send email: ${errorMessage}`)
   }
 }
 
@@ -64,7 +70,10 @@ export const validateEmailJSConfig = () => {
   if (!EMAILJS_CONFIG.publicKey) missing.push('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY')
   
   if (missing.length > 0) {
-    console.error('Missing EmailJS environment variables:', missing)
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Missing EmailJS environment variables:', missing)
+    }
     return false
   }
   
