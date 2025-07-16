@@ -10,7 +10,7 @@ const founderInfo = {
   location: 'Arlington, Virginia',
   education: 'Computer Science Student at University of Pittsburgh',
   vision: 'To advance deep learning and neural network technologies, contributing to pioneering AI projects worldwide.',
-  skills: ['Python', 'JavaScript', 'TypeScript', 'C', 'Java', 'AI/ML', 'OpenAI API', 'RAG Systems']
+  skills: ['Python', 'JavaScript', 'TypeScript', 'Next.js', 'C', 'Java', 'LLMs', 'RAG Systems', 'Agentic AI']
 }
 
 const values = [
