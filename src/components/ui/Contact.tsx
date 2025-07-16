@@ -4,7 +4,9 @@ import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { useState } from 'react'
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { sendEmail, validateEmailJSConfig } from '@/lib/emailjs'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -58,6 +60,9 @@ const budgetRanges = [
 ]
 
 export default function Contact() {
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState<string>('')
+
   const {
     register,
     handleSubmit,
@@ -69,11 +74,29 @@ export default function Contact() {
 
   const onSubmit = async (data: ContactForm) => {
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      console.log('Form submitted:', data)
+      setSubmitStatus('idle')
+      setErrorMessage('')
+
+      // Validate EmailJS configuration
+      if (!validateEmailJSConfig()) {
+        setSubmitStatus('error')
+        setErrorMessage('Email service is not properly configured. Please contact support.')
+        return
+      }
+
+      // Send email using EmailJS
+      await sendEmail(data)
+      
+      // Success
+      setSubmitStatus('success')
       reset()
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000)
     } catch (error) {
       console.error('Error submitting form:', error)
+      setSubmitStatus('error')
+      setErrorMessage('Failed to send message. Please try again or contact us directly.')
     }
   }
 
@@ -264,6 +287,38 @@ export default function Contact() {
                 )}
               </motion.button>
             </form>
+
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center space-x-3"
+              >
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <div>
+                  <p className="text-green-400 font-semibold">Message sent successfully!</p>
+                  <p className="text-green-300 text-sm">Thank you for your inquiry. I'll get back to you within 24 hours.</p>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center space-x-3"
+              >
+                <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                <div>
+                  <p className="text-red-400 font-semibold">Failed to send message</p>
+                  <p className="text-red-300 text-sm">{errorMessage}</p>
+                </div>
+              </motion.div>
+            )}
             </motion.div>
             <div className="h-8"></div>
           </div>
