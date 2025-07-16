@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Award, Users, Target, Lightbulb, Globe, Zap, Brain, Code, Rocket } from 'lucide-react'
+import { Globe, Brain, Code, Rocket } from 'lucide-react'
 
 const founderInfo = {
   name: 'Amir Valizadeh',
@@ -61,8 +61,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto mb-28"
+          className="flex justify-center mb-28"
         >
+          <div className="max-w-4xl w-full">
           <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 md:p-12">
             <div className="text-center mb-8">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{founderInfo.name}</h3>
@@ -96,6 +97,7 @@ export default function About() {
                 ))}
               </div>
             </div>
+          </div>
           </div>
         </motion.div>
 

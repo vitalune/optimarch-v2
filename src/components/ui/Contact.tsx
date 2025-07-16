@@ -126,14 +126,14 @@ export default function Contact() {
           ))}
         </div>
 
-        <div className="max-w-2xl mx-auto">
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+        <div className="flex justify-center">
+          <div className="max-w-2xl w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -264,8 +264,9 @@ export default function Contact() {
                 )}
               </motion.button>
             </form>
-          </motion.div>
-          <div className="h-8"></div>
+            </motion.div>
+            <div className="h-8"></div>
+          </div>
         </div>
       </div>
     </section>
