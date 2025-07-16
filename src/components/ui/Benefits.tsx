@@ -48,30 +48,10 @@ const benefits = [
   }
 ]
 
-const testimonials = [
-  {
-    quote: "Optimarch transformed our customer service operations. Response times improved by 70% and customer satisfaction reached an all-time high.",
-    author: "Sarah Chen",
-    role: "COO, TechFlow Solutions",
-    company: "TechFlow"
-  },
-  {
-    quote: "The AI automation solutions reduced our manual processing time by 80%. Our team can now focus on strategic initiatives that drive growth.",
-    author: "Michael Rodriguez",
-    role: "VP Operations, Global Logistics",
-    company: "GlobalLog"
-  },
-  {
-    quote: "Implementation was seamless and the ROI exceeded our expectations. We're seeing cost savings of over $2M annually.",
-    author: "Emily Watson",
-    role: "CFO, Manufacturing Corp",
-    company: "ManufacturingCorp"
-  }
-]
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="benefits" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -85,7 +65,7 @@ export default function Benefits() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-28">
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.title}
@@ -119,49 +99,6 @@ export default function Benefits() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            What My <span className="gradient-text">Clients Say</span>
-          </h3>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.author}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="h-full p-8 bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-blue-500/30 transition-all duration-300">
-                  <div className="text-4xl text-blue-400 mb-4">&quot;</div>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed italic">
-                    {testimonial.quote}
-                  </p>
-                  
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                      {testimonial.author.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">{testimonial.author}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}</div>
-                      <div className="text-sm text-blue-400">{testimonial.company}</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
       </div>
     </section>

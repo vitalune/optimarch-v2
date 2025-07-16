@@ -14,7 +14,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="space-y-10"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -65,17 +65,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 max-w-4xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24 max-w-4xl mx-auto"
           >
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-3">
               <div className="text-3xl font-bold text-blue-400">50%</div>
               <div className="text-gray-400">Faster Processing</div>
             </div>
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-3">
               <div className="text-3xl font-bold text-purple-400">90%</div>
               <div className="text-gray-400">Cost Reduction</div>
             </div>
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-3">
               <div className="text-3xl font-bold text-cyan-400">24/7</div>
               <div className="text-gray-400">Automated Operations</div>
             </div>

@@ -44,14 +44,14 @@ const processSteps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900">
+    <section id="process" className="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-24"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             My <span className="gradient-text">Proven Process</span>
@@ -61,7 +61,7 @@ export default function Process() {
         <div className="relative">
           <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 opacity-30" />
           
-          <div className="space-y-12">
+          <div className="space-y-20">
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.title}
