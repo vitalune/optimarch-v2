@@ -155,9 +155,9 @@ This project is proprietary and confidential to Optimarch.
 ## 🆘 Support
 
 For questions or support, contact:
-- Email: hello@optimarch.ai
-- Phone: +1 (555) 123-4567
+- Email: amirvalizadeh161@gmail.com
+- Phone: +1 (240) 479-8419
 
 ---
 
-Built with ❤️ and AI-powered innovation by the Optimarch team.
+Built with ❤️ and AI-powered innovation by Amir Valizadeh.

@@ -83,10 +83,6 @@ export default function Benefits() {
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Measurable <span className="gradient-text">Results</span> That Matter
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI automation solutions deliver quantifiable improvements across key business metrics, 
-            driving sustainable growth and competitive advantage.
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -131,7 +127,7 @@ export default function Benefits() {
           className="mb-16"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            What Our <span className="gradient-text">Clients Say</span>
+            What My <span className="gradient-text">Clients Say</span>
           </h3>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -167,38 +163,6 @@ export default function Benefits() {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to See These Results in Your Business?
-            </h3>
-            <p className="text-gray-300 mb-6 text-lg">
-              Join hundreds of companies that have transformed their operations with our AI automation solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold text-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-              >
-                Get Your ROI Analysis
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 rounded-full text-white font-semibold text-lg hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
-              >
-                View Case Studies
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

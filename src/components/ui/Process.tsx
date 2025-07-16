@@ -7,19 +7,19 @@ const processSteps = [
   {
     icon: Search,
     title: 'Discovery & Analysis',
-    description: 'We analyze your current workflows and identify automation opportunities that deliver maximum ROI.',
+    description: 'Optimarch analyzes current workflows and identifies automation opportunities that deliver maximum ROI.',
     details: ['Business Process Mapping', 'Pain Point Identification', 'ROI Assessment', 'Feasibility Study']
   },
   {
     icon: Lightbulb,
     title: 'Strategy & Design',
-    description: 'Our experts design a comprehensive AI strategy tailored to your specific business objectives.',
+    description: 'Optimarch designs comprehensive AI strategies tailored to specific business objectives.',
     details: ['Solution Architecture', 'Technology Selection', 'Implementation Roadmap', 'Risk Assessment']
   },
   {
     icon: Code,
     title: 'Development & Integration',
-    description: 'We build and seamlessly integrate AI solutions into your existing systems and workflows.',
+    description: 'Optimarch builds and seamlessly integrates AI solutions into existing systems and workflows.',
     details: ['Custom AI Development', 'System Integration', 'Quality Assurance', 'Security Implementation']
   },
   {
@@ -31,7 +31,7 @@ const processSteps = [
   {
     icon: Users,
     title: 'Training & Adoption',
-    description: 'We ensure your team is fully equipped to leverage new AI capabilities effectively.',
+    description: 'Optimarch ensures teams are fully equipped to leverage new AI capabilities effectively.',
     details: ['User Training Programs', 'Documentation', 'Change Management', 'Adoption Support']
   },
   {
@@ -54,12 +54,8 @@ export default function Process() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="gradient-text">Proven Process</span>
+            My <span className="gradient-text">Proven Process</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We follow a systematic approach to ensure successful AI implementation 
-            that delivers measurable results and long-term value.
-          </p>
         </motion.div>
 
         <div className="relative">
@@ -134,28 +130,6 @@ export default function Process() {
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-gray-300 mb-6">
-              Let&apos;s discuss how our proven process can deliver AI automation solutions 
-              that drive real results for your organization.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold text-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-            >
-              Start Your AI Journey
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

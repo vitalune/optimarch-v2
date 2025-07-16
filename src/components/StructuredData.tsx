@@ -8,20 +8,20 @@ export default function StructuredData() {
     "logo": "https://optimarch.ai/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-240-479-8419",
       "contactType": "sales",
-      "email": "hello@optimarch.ai"
+      "email": "amirvalizadeh161@gmail.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
+      "addressLocality": "Arlington",
+      "addressRegion": "VA",
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/optimarch",
-      "https://twitter.com/optimarch",
-      "https://github.com/optimarch"
+      "https://linkedin.com/in/amir-valizadeh104",
+      "https://huggingface.co/vitalune",
+      "https://github.com/vitalune"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

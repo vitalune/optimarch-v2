@@ -43,21 +43,12 @@ export default function Hero() {
             <span className="block gradient-text">Business with AI</span>
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
-          >
-            Optimarch delivers cutting-edge AI automation solutions that streamline workflows, 
-            boost productivity, and drive sustainable growth for forward-thinking businesses.
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="flex justify-center items-center"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -68,13 +59,6 @@ export default function Hero() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border border-gray-600 rounded-full text-white font-semibold text-lg hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
-            >
-              Watch Demo
-            </motion.button>
           </motion.div>
 
           <motion.div

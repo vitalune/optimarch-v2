@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { Mail, Phone, MapPin, Send, Clock, Users } from 'lucide-react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -22,20 +22,20 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'hello@optimarch.ai',
+    value: 'amirvalizadeh161@gmail.com',
     description: 'Get in touch for project inquiries'
   },
   {
     icon: Phone,
     title: 'Phone',
-    value: '+1 (555) 123-4567',
-    description: 'Speak with our AI consultants'
+    value: '+1 (240) 479-8419',
+    description: 'Speak with me about AI solutions'
   },
   {
     icon: MapPin,
     title: 'Location',
-    value: 'San Francisco, CA',
-    description: 'Global reach, local expertise'
+    value: 'Arlington, VA',
+    description: 'Local expertise, global perspective'
   }
 ]
 
@@ -49,11 +49,11 @@ const projectTypes = [
 ]
 
 const budgetRanges = [
-  '$50K - $100K',
-  '$100K - $250K',
-  '$250K - $500K',
-  '$500K - $1M',
-  '$1M+',
+  '$500 - $1K',
+  '$1K - $5K',
+  '$5K - $10K',
+  '$10K - #50K',
+  '$50K+',
   'Not sure yet'
 ]
 
@@ -90,10 +90,6 @@ export default function Contact() {
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Let&apos;s <span className="gradient-text">Build the Future</span> Together
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to transform your business with AI? Our experts are here to help you navigate 
-            your automation journey and unlock unprecedented growth opportunities.
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -128,45 +124,11 @@ export default function Contact() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-3xl font-bold text-white mb-6">Get Started Today</h3>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              Whether you&apos;re looking to automate processes, implement predictive analytics, 
-              or develop custom AI solutions, our team is ready to help you achieve your goals.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Quick Response</h4>
-                  <p className="text-gray-400 text-sm">We respond to all inquiries within 24 hours</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-purple-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Expert Consultation</h4>
-                  <p className="text-gray-400 text-sm">Free initial consultation with our AI specialists</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+        <div className="max-w-2xl mx-auto">
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -276,7 +238,7 @@ export default function Contact() {
                   {...register('message')}
                   rows={6}
                   className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors resize-none"
-                  placeholder="Tell us about your project goals, current challenges, and how AI automation can help your business..."
+                  placeholder="Tell me about your project goals, current challenges, and how AI automation can help your business..."
                 />
                 {errors.message && (
                   <p className="text-red-400 text-sm mt-1">{errors.message.message}</p>

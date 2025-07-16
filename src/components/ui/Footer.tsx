@@ -1,12 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, ExternalLink } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink } from 'lucide-react'
+import { Heart } from 'lucide-react'
 
 const socialLinks = [
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Github, href: '#', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/amir-valizadeh104', label: 'LinkedIn' },
+  { icon: Heart, href: 'https://huggingface.co/vitalune', label: 'Hugging Face' },
+  { icon: Github, href: 'https://github.com/vitalune', label: 'GitHub' },
 ]
 
 const footerSections = [
@@ -60,21 +61,21 @@ export default function Footer() {
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
                   Transforming businesses through intelligent AI automation solutions. 
-                  We bridge the gap between cutting-edge technology and practical business results.
+                  I bridge the gap between cutting-edge technology and practical business results.
                 </p>
                 
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Mail className="w-5 h-5 text-blue-400" />
-                    <span>hello@optimarch.ai</span>
+                    <span>amirvalizadeh161@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Phone className="w-5 h-5 text-blue-400" />
-                    <span>+1 (555) 123-4567</span>
+                    <span>+1 (240) 479-8419</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <MapPin className="w-5 h-5 text-blue-400" />
-                    <span>San Francisco, CA</span>
+                    <span>Arlington, VA</span>
                   </div>
                 </div>
               </motion.div>

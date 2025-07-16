@@ -71,10 +71,6 @@ export default function Services() {
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="gradient-text">AI Solutions</span> for Every Business Need
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From intelligent automation to predictive analytics, we deliver comprehensive AI services 
-            that transform how you operate and compete in the digital landscape.
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -116,21 +112,6 @@ export default function Services() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold text-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-          >
-            Explore All Services
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   )

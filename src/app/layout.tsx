@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Optimarch - AI Automation Services",
     description: "Transform your business with cutting-edge AI automation solutions.",
     images: ["/og-image.jpg"],
-    creator: "@optimarch",
+    creator: "@vitalune",
   },
   alternates: {
     canonical: "https://optimarch.ai",
