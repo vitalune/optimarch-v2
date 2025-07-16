@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   creator: "Optimarch",
   publisher: "Optimarch",
   robots: "index, follow",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
