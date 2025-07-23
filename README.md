@@ -1,31 +1,6 @@
 # Optimarch - AI Automation Services Website
 
-A modern, professional NextJS website for Optimarch, an AI automation services business. Built with cutting-edge technologies to showcase AI capabilities through impressive 3D visuals and smooth animations.
-
-## 🚀 Features
-
-### Design & UX
-- **Impressive 3D Background Effects**: Animated particles and geometric shapes using React Three Fiber
-- **Modern Professional UI**: Dark theme with blue/purple accent colors
-- **Smooth Animations**: Framer Motion powered transitions and interactions
-- **Mobile-Responsive Design**: Optimized for all device sizes
-- **Fast Loading Performance**: Optimized with lazy loading and code splitting
-
-### Functionality
-- **Smooth Scrolling Navigation**: Seamless section navigation
-- **Interactive 3D Elements**: Mouse-responsive particle system and geometric shapes
-- **Contact Form**: React Hook Form with Zod validation
-- **SEO Optimized**: Comprehensive meta tags and structured data
-- **Performance Optimized**: Code splitting, lazy loading, and image optimization
-
-### Content Sections
-1. **Hero Section**: 3D background with company tagline and clear CTA
-2. **Services Overview**: AI automation solutions showcase
-3. **Process Section**: Visual workflow representation
-4. **Benefits/Case Studies**: Compelling value propositions with testimonials
-5. **About Section**: Company expertise and team highlighting
-6. **Contact Form**: Professional contact form with validation
-7. **Footer**: Social links and comprehensive site information
+A modern, professional NextJS website for Optimarch, an AI automation services business. Built using MCP servers with agentic AI systems to showcase AI capabilities through impressive 3D visuals and smooth animations.
 
 ## 🛠 Tech Stack
 
@@ -122,24 +97,6 @@ The website is fully responsive with:
 - **Twitter Cards**: Twitter-specific meta tags
 - **Canonical URLs**: Proper URL canonicalization
 
-## 🎯 Target Audience
-
-The website targets business decision-makers looking for:
-- AI automation solutions
-- Process optimization
-- Digital transformation
-- Operational efficiency improvements
-- Technology integration services
-
-## 📊 Key Metrics Highlighted
-
-- **50%** Faster Processing
-- **90%** Cost Reduction
-- **24/7** Automated Operations
-- **300%** Productivity Improvement
-- **40h** Time Savings per Employee per Week
-- **95%** Error Reduction
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -156,7 +113,6 @@ This project is proprietary and confidential to Optimarch.
 
 For questions or support, contact:
 - Email: amirvalizadeh161@gmail.com
-- Phone: +1 (240) 479-8419
 
 ---
 
