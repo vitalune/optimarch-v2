@@ -116,4 +116,4 @@ For questions or support, contact:
 
 ---
 
-Built with ❤️ and AI-powered innovation by Amir Valizadeh.
+Built with ❤️ by Amir Valizadeh.
